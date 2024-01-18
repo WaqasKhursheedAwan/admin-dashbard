@@ -30,7 +30,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: "subcategories",
     label: "Sub categories",
-    path: "sub-categories/:category_name",
+    path: "sub-categories/",
     icon: <HiOutlineUsers />,
   },
   {

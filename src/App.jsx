@@ -14,7 +14,7 @@ function App() {
           <Route path="customers" element={<Customers />} />
           <Route path="main-categories" element={<MainCategory />} />
 
-          <Route path="sub-categories/:category_name" element={<SubCategory />} />
+          <Route path="sub-categories" element={<SubCategory />} />
         </Route>
       </Routes>
     </Router>
