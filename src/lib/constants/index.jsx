@@ -24,13 +24,13 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: " maincategories ",
     label: " Main Categories ",
-    path: "/maincategories",
+    path: "/main-categories",
     icon: <HiOutlineShoppingCart />,
   },
   {
     key: "subcategories",
     label: "Sub categories",
-    path: "/sub-categories",
+    path: "sub-categories/:category_name",
     icon: <HiOutlineUsers />,
   },
   {

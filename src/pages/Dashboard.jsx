@@ -9,10 +9,6 @@ export default function Dashboard() {
       <div className="flex flex-row gap-4 w-full">
         <TransactionChart />
       </div>
-      {/* <div className="flex flex-row gap-4 w-full">
-        <RecentOrders />
-        <PopularProducts />
-      </div> */}
     </div>
   );
 }
