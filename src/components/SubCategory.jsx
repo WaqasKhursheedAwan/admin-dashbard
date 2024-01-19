@@ -5,13 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SubCategory = ({ category_name }) => {
-  console.log(category_name);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newSubCategory, setNewSubCategory] = useState({
     id: "",
     subcategory_name: "",
-    category: "", 
-    product_code: "", 
+    category: "",
+    product_code: "",
   });
   const [subCategories, setSubCategories] = useState([
     {
@@ -59,7 +58,7 @@ const SubCategory = ({ category_name }) => {
   return (
     <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
       <div className="flex justify-between items-center mb-3">
-        <strong className="text-gray-700 font-medium">Subcategory</strong>
+        <strong className="text-gray-700 font-medium">Sub Category</strong>
         <button
           onClick={handleModalOpen}
           className="bg-gray-700 text-white px-2 p-2 rounded-md hover:bg-neutral-500"

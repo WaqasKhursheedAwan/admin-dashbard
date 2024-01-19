@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
 import MainCategory from "./pages/MainCategory";
 import SubCategory from "./pages/SubCategory";
+import Bookings from "./pages/Bookings";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="main-categories" element={<MainCategory />} />
 
           <Route path="sub-categories" element={<SubCategory />} />
+          <Route path="bookings" element={<Bookings />} />
         </Route>
       </Routes>
     </Router>
