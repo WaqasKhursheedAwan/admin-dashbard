@@ -33,6 +33,11 @@ const CategoryList = () => {
   };
 
   const handleAddCategory = () => {
+    if (!newCategory.category_name || !newCategory.brand_name) {
+      toast.error("All fields are required.");
+      return;
+    }
+
     setCategories((prevCategories) => [
       ...prevCategories,
       { ...newCategory, id: (prevCategories.length + 1).toString() },

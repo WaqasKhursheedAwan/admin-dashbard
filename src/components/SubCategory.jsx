@@ -36,6 +36,11 @@ const SubCategory = ({ category_name }) => {
   };
 
   const handleAddSubCategory = () => {
+    if (!newSubCategory.subcategory_name || !newSubCategory.product_code) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
     setSubCategories((prevSubCategories) => [
       ...prevSubCategories,
       {

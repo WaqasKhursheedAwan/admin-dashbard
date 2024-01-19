@@ -6,6 +6,7 @@ import MainCategory from "./pages/MainCategory";
 import SubCategory from "./pages/SubCategory";
 import Bookings from "./pages/Bookings";
 import CustomersSupport from "./pages/CustomersSupport";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="sub-categories" element={<SubCategory />} />
           <Route path="bookings" element={<Bookings />} />
           <Route path="customer-support" element={<CustomersSupport />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </Router>

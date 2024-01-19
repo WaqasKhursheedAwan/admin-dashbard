@@ -10,5 +10,3 @@ const CustomersSupport = () => {
 };
 
 export default CustomersSupport;
-
-//  Customer Name Email Complaint Status
