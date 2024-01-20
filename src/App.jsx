@@ -14,6 +14,7 @@ import Bookings from "./pages/Bookings";
 import CustomersSupport from "./pages/CustomersSupport";
 import Settings from "./pages/Settings";
 import Login from "./pages/Login";
+import Logout from "./pages/Logout";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -38,6 +39,7 @@ function App() {
             <Route path="bookings" element={<Bookings />} />
             <Route path="customer-support" element={<CustomersSupport />} />
             <Route path="settings" element={<Settings />} />
+            {/* <Route path="Logout" element={<Logout />} /> */}
           </Route>
         ) : (
           <Route path="/" element={<Navigate to="/login" />} />
