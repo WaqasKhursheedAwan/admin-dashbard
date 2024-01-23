@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerSupportComponent from "../components/CustomerSupport";
+import CustomerSupportComponent from "../components/Messages";
 
 const CustomersSupport = () => {
   return (
