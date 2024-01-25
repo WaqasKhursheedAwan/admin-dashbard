@@ -14,6 +14,7 @@ import Bookings from "./pages/Bookings";
 import CustomersSupport from "./pages/CustomersSupport";
 import Settings from "./pages/Settings";
 import Login from "./pages/Login";
+import Employees from "./pages/Employees";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Layout onLogout={handleLogout} />}>
             <Route index element={<Dashboard />} />
             <Route path="customers" element={<Customers />} />
+            <Route path="employees" element={<Employees />} />
             <Route path="main-categories" element={<MainCategory />} />
             <Route path="sub-categories" element={<SubCategory />} />
             <Route path="bookings" element={<Bookings />} />

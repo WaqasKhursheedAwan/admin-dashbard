@@ -7,7 +7,7 @@ import {
   HiOutlineAnnotation,
   HiOutlineCog,
 } from "react-icons/hi";
-
+import { FaUsers } from "react-icons/fa";
 export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: "dashboard",
@@ -20,6 +20,12 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Customers",
     path: "/customers",
     icon: <HiOutlineCube />,
+  },
+  {
+    key: "employees",
+    label: "Employees",
+    path: "/employees",
+    icon: <FaUsers />,
   },
   {
     key: " maincategories ",

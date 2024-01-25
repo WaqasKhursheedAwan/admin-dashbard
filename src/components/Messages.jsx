@@ -28,9 +28,9 @@ const Messages = () => {
   };
 
   return (
-    <div className="flex p-2 h-screen">
+    <div className="flex p-2 h-90vh overflow-hidden pt-10 ">
       <div
-        className="w-1/3 "
+        className="w-1/3 h-90vh overflow-hidden "
         style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
       >
         <div className="flex items-center mb-4 border-gray-500 p-2  justify-between">
@@ -80,7 +80,7 @@ const Messages = () => {
         </div>
       </div>
 
-      <div className="flex-1 p-2 flex flex-col ">
+      <div className="flex-1 p-2 flex flex-col h-90vh overflow-hidden ">
         {selectedUser ? (
           <>
             <div className="p-2 bg-gray-200 flex items-center justify-between rounded-lg">
