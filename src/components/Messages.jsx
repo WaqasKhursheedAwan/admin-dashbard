@@ -30,7 +30,7 @@ const Messages = () => {
   return (
     <div className="flex p-2 h-90vh overflow-hidden pt-10 ">
       <div
-        className="w-1/3 h-90vh overflow-hidden "
+        className="w-1/3  "
         style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
       >
         <div className="flex items-center mb-4 border-gray-500 p-2  justify-between">
@@ -80,7 +80,7 @@ const Messages = () => {
         </div>
       </div>
 
-      <div className="flex-1 p-2 flex flex-col h-90vh overflow-hidden ">
+      <div className="flex-1 p-2 flex flex-col  ">
         {selectedUser ? (
           <>
             <div className="p-2 bg-gray-200 flex items-center justify-between rounded-lg">
@@ -115,7 +115,7 @@ const Messages = () => {
                 </div>
               ))}
             </div>
-            <div className="flex items-center mt-3 border border-gray-300 rounded-full p-2 bg-gray-200 ">
+            <div className="flex items-center mt-3 border border-gray-300 rounded-full p-2 bg-gray-200  ">
               <div className="relative mr-2">
                 <FaSmile className="text-2xl cursor-pointer items-center" />
               </div>

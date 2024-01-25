@@ -213,7 +213,7 @@ const EmployeeList = () => {
                   className="border rounded-md p-2 w-full"
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-2">
                 <label htmlFor="skills">Skills:</label>
                 <input
                   type="text"

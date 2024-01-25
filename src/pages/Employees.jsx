@@ -1,10 +1,10 @@
 import React from "react";
-import Employee from "../components/EmployeeList";
+import EmployeeList from "../components/EmployeeList";
 
 const Employees = () => {
   return (
     <div>
-      <Employee />
+      <EmployeeList />
     </div>
   );
 };
