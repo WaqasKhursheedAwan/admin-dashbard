@@ -37,10 +37,10 @@ const Messages = () => {
           <div className="flex gap-1 items-center border-2 rounded-2xl border-gray-300 p-2">
             <input
               type="text"
-              className="w-full bg-gray-100 text-gray-500"
+              className="w-full bg-gray-100 text-gray-500 outline-none"
               placeholder="Search"
             />
-            <FaSearch className="text-gray-500" />
+            <FaSearch className="text-gray-500 " />
           </div>
           <IoFilterOutline className=" mr-3 text-gray-500 cursor-pointer text-3xl" />
         </div>
