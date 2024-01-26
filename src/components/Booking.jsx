@@ -6,6 +6,8 @@ import MapComponent from "./MapComponent";
 
 const customerDetails = {
   name: "John Doe",
+  customer_email: "waqas@gmail.com",
+  phone_number: "111-111-111",
   address: "123 Main St, Cityville",
 };
 
@@ -88,6 +90,7 @@ const Bookings = () => {
               <th className="text-center">Booking Date</th>
               <th className="text-center">Product Name</th>
               <th className="text-center">Customer Name</th>
+              <th className="text-center">Address</th>
               <th className="text-center">Status</th>
               <th>Info</th>
             </tr>
@@ -99,6 +102,7 @@ const Bookings = () => {
                 <td className="text-center">{booking.bookingDate}</td>
                 <td className="text-center">{booking.product}</td>
                 <td className="text-center">{booking.customerName}</td>
+                <td className="text-center">{customerDetails.address}</td>
                 <td className="text-center">
                   {getOrderStatus(booking.current_booking_status.toUpperCase())}
                 </td>
@@ -125,10 +129,18 @@ const Bookings = () => {
       >
         {selectedBooking && (
           <div className="bg-white p-4 rounded-md relative w-[95%] h-[85%] flex">
-            <div className="flex-1 border-r pr-4">
+            <div className="flex-1 border-r pr-4 ">
               <h2 className="text-lg font-medium mb-2">Customer Details</h2>
-              <p>Name: {customerDetails.name}</p>
-              <p>Address: {customerDetails.address}</p>
+              <p className="text-xl mb-2 pt-10">Name: {customerDetails.name}</p>
+              <p className="text-xl mb-2 ">
+                Email: {customerDetails.customer_email}
+              </p>
+              <p className="text-xl mb-2 ">
+                Phone Number: {customerDetails.phone_number}
+              </p>
+              <p className="text-xl mb-2 ">
+                Address: {customerDetails.address}
+              </p>
             </div>
 
             <div className="flex-1 border-r pl-4 pr-4">
@@ -137,13 +149,13 @@ const Bookings = () => {
             </div>
 
             <div className="flex-1 pl-4">
-              <h2 className="text-lg font-medium mb-2">Uploaded Pictures</h2>
+              <h2 className="text-lg font-medium mb-2">Pictures</h2>
               <div className="flex flex-wrap">
                 {uploadedPictures.map((picture, index) => (
                   <img
                     key={index}
                     src={picture}
-                    alt={`Uploaded Picture ${index + 1}`}
+                    alt=""
                     className="mr-2 mb-2 rounded-md"
                     style={{ maxWidth: "100px", maxHeight: "100px" }}
                   />
