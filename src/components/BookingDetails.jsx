@@ -6,7 +6,7 @@ import MapComponent from "./MapComponent";
 
 const customerDetails = {
   name: "John Doe",
-  customer_email: "waqas@gmail.com",
+  customer_email: "john@gmail.com",
   phone_number: "111-111-111",
   address: "123 Main St, Cityville",
 };
