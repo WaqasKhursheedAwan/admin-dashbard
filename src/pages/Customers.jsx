@@ -1,5 +1,5 @@
 import React from "react";
-import CustomersData from "../components/Customers";
+import CustomersData from "../components/CustomersDetail";
 
 const Customers = () => {
   return (
