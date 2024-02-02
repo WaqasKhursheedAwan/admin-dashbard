@@ -23,15 +23,11 @@ function App() {
     setLoggedIn(true);
   };
 
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
-
   return (
     <Router>
       <Routes>
         {isLoggedIn ? (
-          <Route path="/" element={<Layout onLogout={handleLogout} />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="customers" element={<Customers />} />
             <Route path="employees" element={<Employees />} />
