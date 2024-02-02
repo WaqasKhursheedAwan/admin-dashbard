@@ -9,6 +9,20 @@ const customerDetails = {
   customer_email: "john@gmail.com",
   phone_number: "111-111-111",
   address: "123 Main St, Cityville",
+  is_urgent: "true",
+  categories: [
+    {
+      categoryName: "Category A",
+      subcategories: ["Subcategory A1", "Subcategory A2", "Subcategory A3"],
+    },
+    // {
+    //   categoryName: "Category B",
+    //   subcategories: ["Subcategory B1", "Subcategory B2", "Subcategory B3"],
+    // },
+  ],
+  title: "ABCD",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.",
 };
 
 const uploadedPictures = [
@@ -129,25 +143,72 @@ const Bookings = () => {
       >
         {selectedBooking && (
           <div className="bg-white p-4 rounded-md relative w-[95%] h-[85%] flex">
-            <div className="flex-1 border-r pr-4 ">
-              <h2 className="text-lg font-medium mb-2">Customer Details</h2>
-              <p className="text-xl mb-2 pt-10">Name: {customerDetails.name}</p>
-              <p className="text-xl mb-2 ">
-                Email: {customerDetails.customer_email}
+            <div className="flex-1 border-r pr-2 ">
+              {/* Customer details */}
+              <h2 className="text-lg font-semibold mb-2 ">Customer Details</h2>
+              <p className="text-lg  pt-2 font-medium mb-2 ">
+                Name:
+                <span className="ml-2 font-normal ">
+                  {customerDetails.name}
+                </span>
               </p>
-              <p className="text-xl mb-2 ">
-                Phone Number: {customerDetails.phone_number}
+              <p className="text-lg  font-medium mb-2">
+                Email:{" "}
+                <span className="ml-2 font-normal">
+                  {customerDetails.customer_email}
+                </span>
               </p>
-              <p className="text-xl mb-2 ">
-                Address: {customerDetails.address}
+              <p className="text-lg  font-medium mb-2">
+                Phone Number:{" "}
+                <span className="ml-2 font-normal">
+                  {customerDetails.phone_number}
+                </span>
               </p>
-            </div>
+              <p className="text-lg  font-medium mb-2">
+                Address:
+                <span className="ml-2 font-normal">
+                  {customerDetails.address}
+                </span>
+              </p>
+              <p className="text-lg  font-medium mb-2">
+                Urgent Booking:{" "}
+                <span className="ml-2 font-normal">
+                  {customerDetails.is_urgent}
+                </span>
+              </p>
+              <p className="text-lg  font-medium mt-1 mb-2">
+                Title:{" "}
+                <span className="ml-2 font-normal">
+                  {customerDetails.title}
+                </span>
+              </p>
+              <p className="text-lg  font-medium">
+                Description:{" "}
+                <span className="ml-2 font-normal">
+                  {customerDetails.description}
+                </span>
+              </p>
 
+              {/*  categories and subcategories */}
+              {customerDetails.categories.map((category, index) => (
+                <div key={index} className="mt-4 mb-1">
+                  <h3 className="text-lg font-medium">
+                    {category.categoryName}
+                  </h3>
+                  <ul className="list-disc ml-6 ">
+                    {category.subcategories.map((subcategory, subIndex) => (
+                      <li key={subIndex}>{subcategory}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            {/* Map component */}
             <div className="flex-1 border-r pl-4 pr-4">
               <h2 className="text-lg font-medium mb-2">Map Location</h2>
               <MapComponent />
             </div>
-
+            {/* Pictures */}
             <div className="flex-1 pl-4">
               <h2 className="text-lg font-medium mb-2">Pictures</h2>
               <div className="flex flex-wrap">
